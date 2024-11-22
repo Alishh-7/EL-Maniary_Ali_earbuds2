@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+    <link href="css/grid.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <title>Spiderbuds</title>
+  </head>
+  <body class="container">
+    <!-- nav -->
+
+    <nav class="nav grid-con">
+      <div class="logo">
+        <h1 class="hidden">Spider-logo</h1>
+        <img src="./images/spider-logo-main-page.svg" alt="Spider" />
+      </div>
+      <div class="m-col-start-8 l-col-start-9 xl-col-start-10 menu-hid">
+        <h1 class="hidden">hamburger Menu</h1>
+        <ul class="menu nav-links">
+          <li><a class="home" href="#">Home</a></li>
+          <li><a href="#">News</a></li>
+          <li><a class="product" href="#">Product</a></li>
+          <li><a class="Register" href="#">Register</a></li>
+        </ul>
+      </div>
+      <img
+        id="hamburgermenu"
+        class="col-start-4 col-end-5"
+        src="images/hamburgermenu.svg"
+        alt="hamburger menu"
+      />
+      <ul class="hidden mobile-menu col-start-1 col-end-5">
+        <li><a class="home" href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a class="product" href="#">Product</a></li>
+        <li><a class="Register" href="#">Register</a></li>
+      </ul>
+    </nav>
+
+    <!-- hero-page -->
+
+    <section class="hero">
+      <h1 class="hidden">Spider-hero-page</h1>
+      <img src="./images/spider-logo.svg" alt="Spider-Logo" class="hero-logo" />
+      <h1 class="hero-title">Feel The Power Of A Spider</h1>
+      <p class="hero-subtitle">Wireless<br> Feel Powerful<br> Be Iconic Different</p>
+      <button id="takealook" class="button">Take A Look</button>
+    </section>
+
+    <!-- Promo-Animation -->
+    <h1 class="hidden">Animation</h1>
+    <section class="grid-con">
+      <div class="col-span-full">
+        <canvas id="spider-earbuds"></canvas>
+      </div>
+    </section>
+
+    <section class="SpiderBuds grid-con">
+      <div class="promo col-start-1 col-end-5 m-col-end-13">
+        <h2 class="center">Discover the <span> Eight Sensory Spider Modes</span></h2>
+        <p class="center">
+          Experience the ultimate sensory precision with our highly acclaimed spider-inspired technology.
+        </p>
+      </div>
+      <h1 class="hidden">SpiderBuds</h1>
+    </section>
+
+    <!--1 SpiderBuds -->
+
+    <model-viewer
+     src="../model/SpiderBuds.gltf"
+      ar
+       ar-modes="webxr scene-viewer quick-look" 
+       camera-controls 
+       tone-mapping="neutral"
+        poster="../images/poster.webp" 
+        shadow-intensity="1.73"
+         shadow-softness="0.62">
+
+
+
+
+         <!--2 Hotspot-->
+
+          <!--FingerTouch-->
+        <button 
+        class="Hotspot" 
+        slot="hotspot-1" 
+        data-position="-0.36165229436472424m 0.37167672387460166m 0.4236029955164972m"
+         data-normal="0m 0m 1m" 
+         data-visibility-attribute="visible">
+
+            <div class="HotspotAnnotation"></div>
+              </button>
+
+
+         <!--volume-->
+        <button 
+        class="Hotspot" 
+        slot="hotspot-2" 
+        data-position="-0.5779381094612434m 0.34908931059727233m 0.13708514104062536m" 
+        data-normal="-0.9999999999999996m 3.332000986233652e-8m 0m"
+         data-visibility-attribute="visible">
+
+            <div class="HotspotAnnotation"></div>
+        </button>
+
+
+        <!--wireless-->
+        <button class="Hotspot" 
+        slot="hotspot-3"
+         data-position="-0.15684051417979383m 0.3299952927006819m 0.17924002789391996m"
+          data-normal="0.9674204062784091m -0.25246522321807013m -0.01894910503342979m" 
+          data-visibility-attribute="visible">
+            <div class="HotspotAnnotation"></div>
+        </button>
+        
+        <!--noise cancelqtion-->
+        <button class="Hotspot"
+         slot="hotspot-4" 
+         data-position="-0.33614034661758824m 0.3671759688661759m -0.4471540022238331m"
+          data-normal="0.1194335144384005m 0.003200620553490713m -0.9928370418437082m" 
+          data-visibility-attribute="visible">
+            <div class="HotspotAnnotation"></div>
+        </button>
+
+        <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+        </div>
+        <button slot="Spider-button" id="Spider-button">
+            View in your space
+        </button>
+        <div id="ar-prompt">
+            <img src="../images/Spider_hand_prompt.png">
+        </div>
+      </model-viewer> 
+    
+    <!-- X-ray Slider -->
+    <div class="xray">
+      <h2 class="xray-text">Feel the <span>Sensory</span></h2>
+    </div>
+    <div class="grid-con">
+      <section class="col-span-full">
+        <h2 class="hidden">X-Ray </h2>
+        <div id="mobile-tablet-view">
+          <img src="images/SpiderBuds11noba.png" alt="xray-earbuds" />
+          <img src="images/SpiderBuds11_XRay.png" alt="earbuds" />
+        </div>
+        <div id="outerShell">
+          <div id="imageCon">
+            <!-- xray -->
+            <div class="slideImage image-right"></div>
+            <div class="slideImage image-left"></div>
+            <!-- drag bar -->
+            <div class="slideImage image-drag"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Register-now -->
+    <section class="Registernow">
+      <h1 class="hidden">Register-now-section</h1>
+      <div class="grid-con">
+        <div class="col-span-full m-col-span-6">
+          <div class="image-container">
+            <img src="./images/1.png" alt="Earbuds Image" />
+          </div>
+        </div>
+        <div class="Register-now col-span-full m-col-span-6">
+          <div class="content">
+            <div class="login-box">
+              <h2>Login</h2>
+              <form>
+                  <div class="user-box">
+                      <input type="text" name="" required="">
+                      <label>Username</label>
+                  </div>
+                  <div class="user-box">
+                      <input type="password" name="" required="">
+                      <label>Password</label>
+                  </div>
+                  <a href="#">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      Submit
+                  </a>
+              </form>
+          </div>
+            <h2></h2>
+           </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+          <p>© 2024 Spider Earbuds. Created BY ALI</p>
+      </div>
+  </footer>
+    <!-- Scripts -->
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <!-- JavaScript file -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
